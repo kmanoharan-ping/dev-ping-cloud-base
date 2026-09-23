@@ -9,7 +9,7 @@ from health_common import Categories, TestHealthBase
 )
 class TestPingDirectoryHealth(TestHealthBase):
     deployment_name = "healthcheck-pingdirectory"
-    label = f"role={deployment_name}"
+    label = f"pd_health_role={deployment_name}" # Updating the label key as it is overridden by the common label in PEB, causing the integration test to fail
     pingdirectory = "pingDirectory"
     configmap_name = "cluster-health-environment-variables"
     prometheus_service_name = "prometheus"
