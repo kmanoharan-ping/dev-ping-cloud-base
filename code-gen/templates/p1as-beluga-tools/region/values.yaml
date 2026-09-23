@@ -1,3 +1,14 @@
+healthcheck:
+  deployment:
+    # Set container limits for the healthcheck deployment
+    resources:
+      limits:
+        memory: 600Mi
+        cpu:  400m
+      requests:
+        memory: 400Mi
+        cpu: 200m
+
 # Metadata application settings
 metadata:
   # Customization for metadata deployment resource
