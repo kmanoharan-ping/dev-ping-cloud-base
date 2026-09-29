@@ -1,6 +1,4 @@
-apiVersion: builtin
-kind: NamespaceTransformer
+apiVersion: v1
+kind: Namespace
 metadata:
-  name: p1as-beluga-tools-namespace
-  namespace: ${PING_CLOUD_NAMESPACE}
-unsetOnly: true
+  name: health

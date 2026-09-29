@@ -3,10 +3,11 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 
 resources:
   - ../base/custom-resources
+  - ../base/namespace.yaml
   - custom-resources
 
 transformers:
-  - ../base/namespace.yaml
+  - ../base/namespace-transformer.yaml
 
 helmGlobals:
   configHome: /helm-working-dir
