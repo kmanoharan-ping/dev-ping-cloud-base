@@ -8,5 +8,4 @@ resources:
 - logging
 - monitoring
 - pod-reaper
-- health
 - kube-downscaler
