@@ -9,7 +9,7 @@ resources:
 
 ### Remove OpenSearch credentials from prometheus-agent, as OS is not deployed in child-region CDEs
 ### As such, it will also not be able to start due to missing secret.  Note that patchesStrategicMerge
-### will not work here due to parsing issues on volumeMounts.  It will be deleted by 
+### will not work here due to parsing issues on volumeMounts.  It will be deleted by
 ### generate-cluster-state script when primary region is detected.
 patchesJson6902:
   - target:
@@ -167,7 +167,7 @@ patchesStrategicMerge:
 #   - set HEALTHCHECKS_ENABLED=true in base/env_vars
 #   - re-spin pa and pa-was admin pods when argocd syncs these changes
 
-  - ../base/cluster-tools/health/disable-all-healthchecks.yaml
+#  - ../base/cluster-tools/health/disable-all-healthchecks.yaml
 
 ### MANUAL UPDATES SECTION - END
 
@@ -195,4 +195,3 @@ patchesStrategicMerge:
 
   ### The patch is copied from pingcommon
   - ../base/ping-cloud/pingaccess-was/ff-external-ingress/remove-external-ingress.yaml
-
